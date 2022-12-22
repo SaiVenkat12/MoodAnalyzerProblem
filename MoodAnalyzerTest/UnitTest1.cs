@@ -6,6 +6,18 @@ namespace MoodAnalyzerTest
     public class UnitTest1
     {
         [TestMethod]
+        public void Exception()
+        {
+
+            Mood moodtest = new Mood(" ");
+
+            string Expectedresult = "Happy";
+
+            Assert.AreEqual(Expectedresult, "Happy");
+        }
+
+
+
         //public void returnSad()
         //{
 
@@ -15,15 +27,18 @@ namespace MoodAnalyzerTest
 
         //    Assert.AreEqual(Expectedresult, "Sad");
         //}
-        public void returnHappy()
-        {
 
-            Mood moodtest = new Mood("I am in any Mood");
 
-            string Expectedresult = "Happy";
+        //public void returnHappy()
+        //{
 
-            Assert.AreEqual(Expectedresult, "Happy");
-        }
+        //    Mood moodtest = new Mood("I am in any Mood");
+
+        //    string Expectedresult = "Happy";
+
+        //    Assert.AreEqual(Expectedresult, "Happy");
+        //}
+
 
     }
 }
