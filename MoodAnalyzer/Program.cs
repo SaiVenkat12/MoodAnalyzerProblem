@@ -1,13 +1,17 @@
 ﻿using MoodAnalyzer;
 using System;
+
 namespace MoodAlalyzer
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Mood moodAnalyser = new Mood();
-            moodAnalyser.AnalyseMood("I am in Sad Mood");
+            Console.WriteLine("I am in a Sad Mood");
+
+            string analyze = Console.ReadLine();
+            Mood Moodanalyze = new Mood(analyze);
+            Console.WriteLine(Moodanalyze.AnalyzeMood());
         }
     }
 }
