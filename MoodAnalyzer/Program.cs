@@ -12,7 +12,7 @@ namespace MoodAlalyzer
             string analyze = Console.ReadLine();
 
 
-           Mood Moodanalyze = new Mood("I am in any Mood");
+           Mood Moodanalyze = new(" ");
             Console.WriteLine(Moodanalyze.AnalyzeMood());
         }
     }
