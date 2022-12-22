@@ -19,7 +19,6 @@ namespace MoodAnalyzer
         {
             if (this.analyze.Contains("Sad"))
             {
-                Console.WriteLine("Sad");
                 return "Sad";
             }
             else
