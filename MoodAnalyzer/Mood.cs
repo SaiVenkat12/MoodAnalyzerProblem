@@ -47,7 +47,7 @@ namespace MoodAnalyzer
                     }
                     else if (analyze.Contains(" "))
                     {
-                        throw new MoodException(NullMoodErrors.EMPTYMOOD, "Enter nothing !!");
+                        throw new MoodException(NullMoodErrors.EMPTYMOOD, "The String is Null!");
                     }
                     else
                     {
@@ -56,7 +56,7 @@ namespace MoodAnalyzer
                 }
                 catch (Exception e)
                 {
-                    throw new MoodException(NullMoodErrors.NULLMOOD, "Enter something !!");
+                    throw new MoodException(NullMoodErrors.NULLMOOD, "Enter something!");
                 }
 
             }
