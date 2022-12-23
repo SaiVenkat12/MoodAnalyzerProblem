@@ -10,6 +10,11 @@ namespace MoodAnalyzer
     public class Mood
     {
         public string analyze;
+
+        public Mood()
+        {
+        }
+
         public Mood(string analyze)
         {
             this.analyze = analyze;
@@ -37,7 +42,12 @@ namespace MoodAnalyzer
 
         }
 
-            public string AnalyzeMood3()
+        public string AnalyzeMood(string v)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string AnalyzeMood3()
             {
                 try
                 {

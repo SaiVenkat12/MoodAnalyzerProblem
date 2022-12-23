@@ -6,15 +6,21 @@ namespace MoodAnalyzerTest
     public class UnitTest1
     {
         [TestMethod]
+
         public void CustomException()
         {
-
-            Mood moodtest = new Mood("Null Mood ");
-
-            string Expectedresult = "Null";
-
-            Assert.AreEqual(Expectedresult, "Null");
+        try 
+        {
+         string analyze = null;
+        Mood Moodanalyze = new Mood();
+        string mood = Moodanalyze.AnalyzeMood("");
+        }                 
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
         }
+        }
+
 
         //public void Exception()
         //{
