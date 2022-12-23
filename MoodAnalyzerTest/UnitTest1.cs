@@ -7,19 +7,34 @@ namespace MoodAnalyzerTest
     {
         [TestMethod]
 
-        public void CustomException()
+        public void reflection()
         {
-        try 
-        {
-         string analyze = null;
-        Mood Moodanalyze = new Mood();
-        string mood = Moodanalyze.AnalyzeMood("");
-        }                 
-        catch (Exception e)
-        {
-            Console.WriteLine(e.Message);
+            try
+            {
+                object expected = new Mood();
+                object reflex = MoodAnalyzerFactory.CreateMoodAnalyze("Mood", "Mood");
+                expected.Equals(reflex);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
-        }
+
+
+        //public void CustomException()
+        //{
+        //try 
+        //{
+        // string analyze = null;
+        //Mood Moodanalyze = new Mood();
+        //string mood = Moodanalyze.AnalyzeMood("");
+        //}                 
+        //catch (Exception e)
+        //{
+        //    Console.WriteLine(e.Message);
+        //}
+        //}
 
 
         //public void Exception()
@@ -53,6 +68,7 @@ namespace MoodAnalyzerTest
 
         //    Assert.AreEqual(Expectedresult, "Happy");
         //}
+
 
 
     }
