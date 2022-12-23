@@ -7,13 +7,13 @@ namespace MoodAnalyzerTest
     {
         [TestMethod]
 
-        public void reflection()
+        public void returnobject()
         {
             try
             {
                 object expected = new Mood();
-                object reflex = MoodAnalyzerFactory.CreateMoodAnalyze("Mood", "Mood");
-                expected.Equals(reflex);
+                object obj = MoodAnalyzerFactory.CreateMoodAnalyze("Mood", "Mood");
+                expected.Equals(obj);
             }
             catch (Exception e)
             {
