@@ -7,15 +7,13 @@ namespace MoodAnalyzerTest
     {
         [TestMethod]
 
-        public void ThrowException()
+        public void returnMoodAnalyzerObject()
         {
             try
             {
 
-                Mood analyze = new Mood("Happy ");
-                string input = null;
-                object expected = new Mood(input);
-                object obj = MoodAnalyzefactory.CreateParameterizedConstrucor("Moo", "Mood", "Sad");
+                object expected = new Mood("Return Mood analyzer Object");
+                object obj = MoodAnalyzefactory.CreateParameterizedConstrucor("MoodAnalyzer.Mood", "Mood", "Happy");
                 expected.Equals(obj);
             }
             catch (Exception e)
@@ -23,6 +21,23 @@ namespace MoodAnalyzerTest
                 Console.WriteLine(e.Message);
             }
         }
+
+        //public void ThrowException()
+        //{
+        //    try
+        //    {
+
+        //        Mood analyze = new Mood("Happy ");
+        //        string input = null;
+        //        object expected = new Mood(input);
+        //        object obj = MoodAnalyzefactory.CreateParameterizedConstrucor("Moo", "Mood", "Sad");
+        //        expected.Equals(obj);
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        Console.WriteLine(e.Message);
+        //    }
+        //}
 
         //public void returnproperobject()
         //{
