@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MoodAnalyzer;
+using static MoodAnalyzer.MoodException;
 
 namespace MoodAnalyzer
 {
@@ -12,14 +12,16 @@ namespace MoodAnalyzer
         public string analyze;
         public Mood(string analyze)
         {
-            this.analyze= analyze;
+            this.analyze = analyze;
 
         }
+
+
         public string AnalyzeMood()
         {
             try
             {
-                if (this.analyze.ToLower().Contains("sad"))
+                if (analyze.ToLower().Contains("sad"))
                 {
                     return "Sad";
                 }
@@ -28,13 +30,35 @@ namespace MoodAnalyzer
                     return "Happy";
                 }
             }
-            catch (NullReferenceException ex)
+            catch (ArgumentNullException n)
             {
-                return "Happy";
+                return "happy";
             }
 
         }
 
+            public string AnalyzeMood3()
+            {
+                try
+                {
+                    if (this.analyze.ToLower().Contains("sad"))
+                    {
+                        return "Sad";
+                    }
+                    else if (analyze.Contains(" "))
+                    {
+                        throw new MoodException(NullMoodErrors.EMPTYMOOD, "Enter nothing !!");
+                    }
+                    else
+                    {
+                        return "Happy";
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw new MoodException(NullMoodErrors.NULLMOOD, "Enter something !!");
+                }
 
+            }
     }
 }
