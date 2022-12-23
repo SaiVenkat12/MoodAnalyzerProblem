@@ -7,7 +7,7 @@ namespace MoodAnalyzerTest
     {
         [TestMethod]
 
-        public void parameterconstructor()
+        public void returnproperobject()
         {
             try
             {
@@ -15,14 +15,30 @@ namespace MoodAnalyzerTest
                 Mood analyze = new Mood("should return mood analysis object");
                 string input = null;
                 object expected = new Mood(input);
-                object obj = MoodAnalyzefactory.CreateParameterizedConstrucor("Mood", "Mood");
+                object obj = MoodAnalyzefactory.CreateParameterizedConstrucor("Mood", "Mood", "Sad");
                 expected.Equals(obj);
             }
             catch (Exception e)
             {
-
+                Console.WriteLine(e.Message);
             }
         }
+
+        //public void parameterconstructor()
+        //{
+        //    try
+        //    {
+
+        //        Mood analyze = new Mood("should return mood analysis object");
+        //        string input = null;
+        //        object expected = new Mood(input);
+        //        object obj = MoodAnalyzefactory.CreateParameterizedConstrucor("Mood", "Mood");
+        //        expected.Equals(obj);
+        //    }
+        //    catch (Exception e)
+        //    {
+        //    }
+        //}
 
         //public void returnobject()
         //{
