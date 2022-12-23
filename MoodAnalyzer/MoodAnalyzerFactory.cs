@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MoodAnalyzer
 {
-    public class MoodAnalyzerFactory
+    public class MoodAnalyzeFactory
     {
         public static object CreateMoodAnalyze(string ClassName, string ConstructorName)
         {
